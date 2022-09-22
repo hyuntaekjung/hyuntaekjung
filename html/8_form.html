@@ -7,31 +7,50 @@
     <title>form 태그</title>
 </head>
 <body>
-    <form action="/server" method="post">
+    <form action="/server" method="post" id="form1" novalidate autocomplete="off">
     <ul>
             <li>
             <label for="userId">아이디 :</label>
-            <input type="text" placeholder="아이디를 입력하세요" id="userId"></li>
+            <input type="text" placeholder="아이디를 입력하세요" id="userId" required></li>
            
+            <li>
+                <label>
+                    이메일 : <input type="email" placeholder="이메일을 입력하세요" name="" id="">
+                </label>
+            </li>
+
             <li>비밀번호 : <input type="password" name="test" id="" placeholder="비밀번호를 입력하세요" autofocus></li>
            
             <li>나이 : <input type="number" max="79" min="18" name="" id="" placeholder="나이를 입력하세요"></li>
            
             <li> 이미지 : <input type="file" accept="image" id=""></li>
            
-            취미 :
+            <li>취미 :
             <label>
             영화감상
             <input type="checkbox" name="" id="">
             </label>
-        
+            </li>
             <li>
             마케팅 수신 동의 :
             <label> 동의 <input type="radio" name="marketing" value="1"></label>
-            <label> 미동의 <input type="radio" name="marketing" value="2"></label>
+            <label> 미동의 <input type="radio" name="marketing" value="2" checked></label>
             </li>
+            
+            <li>
+                <label>
+                    도시 :
+                    <select name="city" id="">
+                        <option value="">서울특별시</option>
+                        <option value="">용인시</option>
+                        <option value="">경기도</option>
+                        <option value="">강원도</option>
+                    </select>
+                </label>
+            </li>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi enim natus impedit qui quam eos saepe temporibus, fuga molestiae facilis. Obcaecati voluptates numquam eligendi temporibus ab repellat modi soluta atque.</p>
     </ul>
-    <button type="submit">전송</button>
+    <button type="submit" form="form1">전송</button>
     <button type="reset">초기화</button>
     </form>
 </body>
