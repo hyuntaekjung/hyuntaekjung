@@ -98,3 +98,43 @@ ul > li {
 ul li {
     padding: 10px;
 }
+
+/*
+     9. 가상 클래스
+     - 특정 조건에 만족하는 요소에만 적용 된다.
+*/
+
+ol li:hover {
+    color: red;
+}
+/* ol 태그 안의 li 중 마우스가 올라간 li만 적용된다. */
+
+ol li:active {
+    color: green;
+}
+/* ol 태그 안의 li 중 마우스로 클릭 중인 li만 적용된다. */
+
+ol li:first-child {
+    border: 1px solid #ddd;
+}
+ol li:last-child {
+    border: 1px solid #ddd;
+}
+ol li:nth-child(2) {
+    border: 1px solid #ddd;
+}
+/* ol 자식 요소 중 두번쨰 자식 요소인 li만 적용된다. */
+
+/*
+     9. 가상 요소
+      -html문서 상에 작성되지는 않았지만 가상의 요소를 추가하여 스타일을 적용한다.
+*/
+
+ol li:hover::after {
+    content: "";
+    color: red;
+    border: 2px solid black;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}
