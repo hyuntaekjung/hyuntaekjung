@@ -1,25 +1,38 @@
 html {
-    font-family: monospace, 'Courier New', Courier; 
-    font-size: 12px;
+  font-family: monospace, "Courier New", Courier;
+  font-size: 12px;
 }
 /* 지정된 폰트가가 없으면 그 다음 폰트가 대체로 적용된다. */
 body {
-    font-size: 14px;
+  font-size: 14px;
 }
 p {
-    font-size: 3rem;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
+  font-size: 3rem;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4em;
+  word-spacing: 0.2em;
+  letter-spacing: 0.2em;
+
+  text-transform: lowercase;
 }
-/* 글씨 크기. */  
+/* 글씨 크기. */
 /* rem : root에 지정된 크기에 대한 비율. */
 /*  em : 부모 요소의 글씨 크기에 대한 비율. */
 /* 글씨 굵기. 100단위. 보통 굵기는 400 쯤. */
 /* 글씨 가로 정렬. */
 
 span {
-    text-decoration: line-through double 1px green;
+  text-decoration: line-through double 1px green;
 }
 /* 글씨를 꾸미는 선을 긋는다.
    선의 위치, 종류, 색상, 두깨을 지정할 수 있다. */
+
+.lineBox {
+  width: 300px;
+  height: 50px;
+  border: 3px solid black;
+  line-height: 50px;
+  text-align: center;
+}

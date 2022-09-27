@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      li {
+        list-style: none;
+      }
+      #gnbList > li {
+        text-align: center;
+        display: inline-block;
+        /* height: 20px;
+        overflow: hidden; */
+
+        border: 1px solid black;
+      }
+
+      #gnbList > li:hover {
+        /* overflow: visible; */
+        height: initial; /* 해당 태그의 초기값. */
+      }
+
+      #gnbList > li:hover ul {
+        display: initial;
+      }
+
+      #gnbList > li ul {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="gnb">
+        <ul id="gnbList">
+          <li>
+            <a href="">HTML</a>
+            <ul>
+              <li><a href="">HTML이란?</a></li>
+              <li><a href="">HTML 문법</a></li>
+              <li><a href="">HTML 구조</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">CSS</a>
+            <ul>
+              <li><a href="">CSS란?</a></li>
+              <li><a href="">CSS 문법</a></li>
+              <li><a href="">CSS 선택자</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">JavaScript</a>
+            <ul>
+              <li><a href="">JavaScript란?</a></li>
+              <li><a href="">JavaScript 적용법</a></li>
+              <li><a href="">JavaScript 실행법</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
