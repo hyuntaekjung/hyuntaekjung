@@ -28,6 +28,12 @@
   color: #fff;
 }
 
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
 #Logo {
   left: 20px;
   position: absolute;
@@ -36,6 +42,12 @@
 
   transform: translateY(-50%);
 }
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
 
 .banner {
   margin-top: 50px;
@@ -49,6 +61,7 @@
 .bannerList {
   width: 450px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .bannerList li {
@@ -63,10 +76,26 @@
 }
 
 .bannerList li {
-  background: url(/assets/123213.jpg) center/cover;
+  background: center/cover no-repeat;
+}
+
+.bannerList li:first-child {
+  background-image: url(/assets/123213.jpg);
+}
+
+.bannerList li:nth-child(2) {
+  background-image: url(/assets/다운로드1.jpg);
+}
+
+.bannerList li:nth-child(3) {
+  background-image: url(/assets/123213.jpg);
 }
 
 .bannerList li a {
   display: block;
   height: 100%;
+}
+
+.bannerList li:hover {
+  background-size: auto 120%;
 }
