@@ -1,0 +1,61 @@
+.container {
+  width: 500px;
+  height: 500px;
+  height: 300px;
+  border: 3px solid black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: 0.25s;
+
+  animation: moveX; /* 실행할 애니메이션을 지정한다. */
+  animation-duration: 0.5s; /* 애니메이션이 몇 초에 걸쳐서 실행될지 시간을 정한다. */
+  animation-iteration-count: 10; /* 애니메이션 반복 횟수를 지정한다. */
+  animation-direction: alternate; /* 애니메이션 방향을 지정한다. */
+  animation-fill-mode: forwards; /* 애니메이션의 마지막 프레임 유지 여부 */
+  animation-delay: 1s;
+  animation-timing-function: steps(4);
+  /* animation-play-state: paused;  애니메이션의 상태를 정지시킨다. */
+}
+
+.box:hover {
+  width: 200px;
+}
+
+.btnchat {
+  width: 50px;
+  height: 50px;
+
+  border: 3px solid black;
+  border-radius: 50%;
+
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+
+  animation: slideUP 0.5s;
+  animation-fill-mode: ;
+}
+
+@keyframes moveX {
+  0% {
+    background-color: black;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translate(80px);
+  }
+}
+
+@keyframes slideUP {
+  /* 초기 값 세팅이 필요없는 경우 form을 생략 */
+  from {
+    transform: translateY(50px);
+  }
+}
