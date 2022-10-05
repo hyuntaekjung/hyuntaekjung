@@ -1,6 +1,10 @@
 #header {
   background-color: #ddd;
   position: relative;
+  overflow: hidden;
+
+  animation-fill-mode: backwards;
+  animation: show 0.4s;
 }
 
 #gnb {
@@ -21,6 +25,7 @@
   padding: 10px;
   display: block;
   width: 100px;
+  transition-duration: 0.25s;
 }
 
 #gnbList li a:hover {
@@ -76,7 +81,8 @@
 }
 
 .bannerList li {
-  background: center/cover no-repeat;
+  background: center / auto 100% no-repeat;
+  transition: 0.25s;
 }
 
 .bannerList li:first-child {
@@ -98,4 +104,44 @@
 
 .bannerList li:hover {
   background-size: auto 120%;
+}
+
+@keyframes show {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 50px;
+  }
+}
+
+.btnchat {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 50%;
+
+  text-align: center;
+  line-height: 45px;
+
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  animation: slideUP 0.25s, fadeIN 1s;
+}
+
+@keyframes slideUP {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIN {
+  from {
+    opacity: 0;
+  }
 }

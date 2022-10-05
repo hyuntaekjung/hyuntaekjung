@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  width: 100px;
+}
+
+button {
+  width: 100px;
+}
+
+.container {
+  display: flex;
+  border: 3px solid black;
+  flex-direction: row;
+  justify-content: center;
+  width: 700px;
+}
+
+.box {
+  background-color: red;
+
+  flex-basis: 100px;
+  flex-grow: 3;
+  flex-shrink: 4;
+}
+
+.container :nth-child(2) {
+  flex-grow: 1;
+  background-color: blue;
+  flex-shrink: 1;
+}
