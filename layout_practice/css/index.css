@@ -1,29 +1,36 @@
 #header {
   background-color: #ddd;
   position: relative;
-  overflow: hidden;
 
-  animation-fill-mode: backwards;
-  animation: show 0.4s;
+  display: flex;
+  justify-content: center;
+
+  /* overflow: hidden; */
+  /* animation-fill-mode: backwards;
+  animation: show 0.4s; */
 }
 
 #gnb {
-  text-align: center;
-  font-size: 0px;
+  /* text-align: center;
+  font-size: 0px;*/
 }
 
 #gnbList {
-  display: inline-block;
-  font-size: 1rem;
+  display: flex;
+  /* display: inline-block;
+  font-size: 1rem; */
 }
 
 #gnbList li {
-  float: left;
+  text-align: center;
+  /* float: left; */
 }
 
 #gnbList li a {
-  padding: 10px;
-  display: block;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   transition-duration: 0.25s;
 }
@@ -40,9 +47,11 @@
 /*  */
 
 #Logo {
-  left: 20px;
-  position: absolute;
+  /* left: 20px;
+  position: absolute; */
   font-size: 1rem;
+  position: absolute;
+  left: 10px;
   top: 50%;
 
   transform: translateY(-50%);
@@ -64,48 +73,37 @@
 }
 
 .bannerList {
-  width: 450px;
-  margin: 0 auto;
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.bannerList li:nth-of-type(2) {
+  margin: 0 10px;
 }
 
 .bannerList li {
-  width: 32%;
-  height: 200px;
   border: 3px solid black;
-  float: left;
-}
-
-.bannerList :nth-child(2) {
-  margin: 0 2%;
-}
-
-.bannerList li {
-  background: center / auto 100% no-repeat;
-  transition: 0.25s;
-}
-
-.bannerList li:first-child {
-  background-image: url(/assets/123213.jpg);
-}
-
-.bannerList li:nth-child(2) {
-  background-image: url(/assets/다운로드1.jpg);
-}
-
-.bannerList li:nth-child(3) {
-  background-image: url(/assets/123213.jpg);
 }
 
 .bannerList li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 190px;
+
+  overflow: hidden;
+}
+
+.bannerList li a:hover img {
+  height: 120%;
+  transition: 0.25s;
+}
+
+.bannerList li img {
   height: 100%;
 }
-
-.bannerList li:hover {
-  background-size: auto 120%;
-}
-
 @keyframes show {
   from {
     max-height: 0;
