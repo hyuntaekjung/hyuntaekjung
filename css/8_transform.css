@@ -1,0 +1,72 @@
+.container {
+  width: 500px;
+  padding: 20px;
+  border: 3px solid black;
+
+  perspective: 100px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px 0;
+  background: red;
+
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+
+  transition: all 1s 0.25s linear, transform 3s; /* 트랜지션 단축속성. */
+}
+
+.translate .x:hover {
+  transform: translateX(20px);
+  width: 300px;
+
+  transition-duration: 1s; /* 몇 초에 걸쳐서 변할지. */
+  transition-delay: 0.25s; /* 몇 초 뒤에 변할지. */
+  transition-property: all; /* 트랜지션을 적용할 속성을 지정. */
+  transition-timing-function: linear; /* 값의 변화폭을 지정. */
+}
+.translate .y:hover {
+  transform: translateY(20px);
+}
+
+.translate .xy:hover {
+  transform: translate(20px, 20px); /* 좌표를 하나만 넣으면 x축만 적용. */
+}
+
+.translate .z:hover {
+  transform: translateZ(-100px);
+}
+
+.scale .x:hover {
+  transform: scale(1.1);
+}
+
+.scale .y:hover {
+  transform: translate(1.2);
+
+  transform-origin: bottom; /* 변형의 축을 적용한다. */
+}
+
+.scale .xy:hover {
+  /* transform: scale(1.5); */
+  transform: scale(1.2, 1.5);
+}
+
+.rotate .z:hover {
+  transform: rotate(-30deg);
+}
+
+.skew .x:hover {
+  transform: skewX(30deg);
+}
+
+.skew .y:hover {
+  transform: skewy(10deg);
+}
+
+.skew .xy:hover {
+  transform: skew(10deg 20deg);
+}
