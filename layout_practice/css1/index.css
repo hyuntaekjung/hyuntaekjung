@@ -1,0 +1,101 @@
+#header {
+  background-color: #ddd;
+  position: relative;
+}
+
+#gnb {
+  text-align: center;
+  font-size: 0px;
+}
+
+#gnbList {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+#gnbList li {
+  float: left;
+}
+
+#gnbList li a {
+  padding: 10px;
+  display: block;
+  width: 100px;
+}
+
+#gnbList li a:hover {
+  background-color: #bbb;
+  color: #fff;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+#Logo {
+  left: 20px;
+  position: absolute;
+  font-size: 1rem;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.banner {
+  margin-top: 50px;
+}
+
+.banner h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.bannerList {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.bannerList li {
+  width: 32%;
+  height: 200px;
+  border: 3px solid black;
+  float: left;
+}
+
+.bannerList :nth-child(2) {
+  margin: 0 2%;
+}
+
+.bannerList li {
+  background: center/cover no-repeat;
+}
+
+.bannerList li:first-child {
+  background-image: url(/assets/123213.jpg);
+}
+
+.bannerList li:nth-child(2) {
+  background-image: url(/assets/다운로드1.jpg);
+}
+
+.bannerList li:nth-child(3) {
+  background-image: url(/assets/123213.jpg);
+}
+
+.bannerList li a {
+  display: block;
+  height: 100%;
+}
+
+.bannerList li:hover {
+  background-size: auto 120%;
+}
