@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .left {
+        flex: 1;
+      }
+
+      .center {
+        flex: 2;
+      }
+      .center ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      .right {
+        flex: 1;
+      }
+
+      .right ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">로고</div>
+      <div class="center">
+        <ul>
+          <li>메뉴</li>
+          <li>메뉴</li>
+          <li>메뉴</li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li>사이드</li>
+          <li>사이드</li>
+          <li>사이드</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

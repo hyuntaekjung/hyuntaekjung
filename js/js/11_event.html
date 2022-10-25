@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- defer : 파일을 비동기적으로 읽어온 다음에 마지막에 실행. async 속성과 비교해보기 -->
+    <script src="./11_event.js" defer></script>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+        background: red;
+      }
+
+      .box.active {
+        border: 3px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <!-- <button onclick="clickElement()">빨간색</button> 전통적인 이벤트 핸들러. 거의 사용되지 않는다. -->
+    <div class="container">
+      <button>빨간색</button>
+      <button>파란색</button>
+      <button>검은색</button>
+    </div>
+  </body>
+</html>
