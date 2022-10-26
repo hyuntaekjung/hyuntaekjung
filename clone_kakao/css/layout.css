@@ -1,3 +1,7 @@
+:root {
+  --iconsBg: #eee;
+}
+
 html {
   font-family: "Noto Sans KR";
 }
@@ -81,13 +85,25 @@ body {
 }
 
 #headerBtns button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  padding: 5px;
   border: none;
   background: none;
+  border-radius: 50%;
 }
 
 #headerBtns svg {
-  width: 25px;
+  width: 100%;
   stroke: black;
+}
+
+#headerBtns li:nth-child(4) {
+  display: none;
 }
 
 @media screen and (max-width: 1439px) {
@@ -104,5 +120,22 @@ body {
 
   #gnb {
     display: none;
+  }
+
+  #headerBtns li:nth-child(2),
+  #headerBtns li:nth-child(3) {
+    display: none;
+  }
+
+  #headerBtns li:nth-child(4) {
+    display: block;
+  }
+}
+
+/* min-width : 최소 ~ 이상*/
+
+@media (min-width: 1023px) {
+  #headerBtns li button:hover {
+    background-color: #888;
   }
 }
