@@ -33,10 +33,6 @@ body {
   justify-content: space-between;
 }
 
-#header h1 {
-  font-size: 28px;
-}
-
 #logo {
   width: 200px;
 }
@@ -48,7 +44,8 @@ body {
 }
 
 #logo a svg {
-  stroke: black;
+  height: 100%;
+  width: 100%;
 }
 
 #gnbList {
@@ -61,7 +58,12 @@ body {
   line-height: 72px;
   padding: 0 28px;
 
+  color: #888;
   font-weight: 500;
+}
+
+#gnbList li a.activer {
+  color: #000;
 }
 
 #headerBtns {
