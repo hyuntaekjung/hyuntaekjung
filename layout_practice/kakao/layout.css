@@ -1,5 +1,5 @@
 html {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR";
 }
 
 body {
@@ -8,29 +8,30 @@ body {
 
 #header {
   position: fixed;
-  left: 0;
   width: 100%;
+  left: 0;
   top: -73px;
   border-bottom: 1px solid black;
-  transition: 0.25s;
-}
 
-#header.active {
-  top: 0;
+  transition: 0.25s;
 }
 
 #header.onTop {
   border-bottom: none;
 }
 
+#header.active {
+  top: 0;
+}
+
 #header .wrapperHeader {
   display: flex;
-  max-width: 1296px;
+  justify-content: space-between;
   align-items: center;
 
-  margin: 0 auto;
   /* height: 72px; */
-  justify-content: space-between;
+  max-width: 1296px;
+  margin: 0 auto;
 }
 
 #logo {
@@ -58,11 +59,11 @@ body {
   line-height: 72px;
   padding: 0 28px;
 
-  color: #888;
   font-weight: 500;
+  color: #888;
 }
 
-#gnbList li a.activer {
+#gnbList li a.active {
   color: #000;
 }
 
@@ -75,16 +76,16 @@ body {
   justify-content: flex-end;
 }
 
+#headerBtns ul li {
+  margin: 0 10px;
+}
+
 #headerBtns button {
   border: none;
   background: none;
 }
 
-#headerBtns ul li {
-  margin: 0 10px;
-}
-
-#headerBtns ul li svg {
+#headerBtns svg {
   width: 25px;
   stroke: black;
 }
@@ -100,8 +101,8 @@ body {
     max-width: 630px;
     height: 60px;
   }
-}
 
-#gnb {
-  display: none;
+  #gnb {
+    display: none;
+  }
 }
