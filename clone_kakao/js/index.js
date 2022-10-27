@@ -1,5 +1,5 @@
 let headerElem = document.getElementById("header");
-let navItemList = document.querySelectorAll("#gnbList li a");
+let navItemList = document.querySelectorAll("#gnbList > li > a");
 let gnbListElem = document.getElementById("gnbList");
 
 let currScroll = window.scrollY;
@@ -45,14 +45,32 @@ gnbListElem.addEventListener("mouseover", function (e) {
     e.target : 이벤트가 발생한 요소
     e.currentTarget : 이벤트가 바인딩된 요소
   */
-  navItemList.forEach((item) => {
-    if (e.target === item) item.classList.add("active");
-    else item.classList.remove("active");
-  });
+  if (e.target.matches("gnbList > li > a"))
+    navItemList.forEach((item) => {
+      if (e.target === item) item.classList.add("active");
+      else item.classList.remove("active");
+    });
 });
 
 gnbListElem.addEventListener("mouseleave", function () {
   navItemList.forEach((item) => {
     item.classList.add("active");
   });
+});
+
+gnbListElem.addEventListener("click", function (e) {
+  if (e.target.matches("#gnbList > li > a")) {
+    // a태그 클릭 시 상위 노드(li) 안에 .depth02 요소 있는 지 확인
+    if (e.target.parentNode.querySelector(".depth02")) {
+      e.preventDefault(); // 요소의 기본 기능을 실행하지 않는다.
+      // alert("하위 메뉴 있음"); // null, undefined는 false처럼 작동한다.
+      let depth01List = gnbListElem.querySelectorAll("#gnbList li");
+      // 일단 모든 li의 on 클래스 지우기
+      depth01List.forEach((depth) => {
+        depth.classList.remove("on");
+      });
+      // 내가 클릭한 li에만 on 클래스 더하기
+      e.target.parentNode.classList.add("on");
+    }
+  }
 });
