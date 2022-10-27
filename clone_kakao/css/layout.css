@@ -1,6 +1,9 @@
 :root {
   --iconsBg: #eee;
-  --main-color: red;
+  --main-color: #e4230e;
+  --desk-wrapper-width: 1296px;
+  --tablet-wrapper-width: 952px;
+  --mobile-wrapper-width: 630px;
 }
 
 html {
@@ -15,18 +18,19 @@ body {
   position: fixed;
   width: 100%;
   left: 0;
-  top: -73px;
-  border-bottom: 1px solid black;
+  top: 0;
+  transform: translateY(0);
+  border-bottom: 1px solid #eee;
 
-  transition: 0.25s;
+  transition: transform 0.25s;
 }
 
 #header.onTop {
   border-bottom: none;
 }
 
-#header.active {
-  top: 0;
+#header.hide {
+  transform: translateY(-100%);
 }
 
 #header .wrapperHeader {
@@ -35,7 +39,7 @@ body {
   align-items: center;
 
   /* height: 72px; */
-  max-width: 1296px;
+  max-width: var(--desk-wrapper-width);
   margin: 0 auto;
 }
 
@@ -72,12 +76,12 @@ body {
   color: #000;
 }
 
-/* depth01 on 클래스 가질 때 보이게 */
+/* depth01 on 클래스 가질 때 depth02 보이게 */
 #gnbList li.on .depth02 {
   display: flex;
 }
 
-/* depth01 기본적으로 안보이게 */
+/* depth02 기본적으로 안보이게 */
 #gnbList .depth02 {
   display: none;
   padding: 15px 20px;
@@ -86,14 +90,14 @@ body {
   position: absolute;
   bottom: -30px;
 
-  background-color: #000;
+  background-color: black;
 
   color: #fff;
 }
 
 #gnbList .depth02 a {
   padding: 10px 0;
-  margin: 5px;
+  margin: 0 5px;
 }
 
 #gnbList li:nth-child(2) a {
@@ -138,15 +142,45 @@ body {
   display: none;
 }
 
+/* 타이틀 영역 */
+
+.titleBox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 73px;
+  left: 0;
+  border-bottom: 1px solid #eee;
+  transition: top 0.25s;
+}
+
+.wrapperTitle {
+  display: flex;
+  align-items: center;
+  max-width: var(--desk-wrapper-width);
+  margin: 0 auto;
+  height: 72px;
+}
+
+.wrapperTitle img {
+  width: 36px;
+}
+
+.wrapperTitle h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px;
+}
+
 @media screen and (max-width: 1439px) {
   #header .wrapperHeader {
-    max-width: 952px;
+    max-width: var(--tablet-wrapper-width);
   }
 }
 
 @media screen and (max-width: 1023px) {
   #header .wrapperHeader {
-    max-width: 630px;
+    max-width: var(--mobile-wrapper-width);
     height: 60px;
   }
 
@@ -159,11 +193,11 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 
     transform: translate(100%);
+    transition: 0.4s;
   }
 
-  #gnbList.on {
+  #gnb.on {
     transform: translate(0);
-    transition: 0.4s;
   }
 
   #gnbList {
