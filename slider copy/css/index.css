@@ -1,0 +1,154 @@
+#header {
+  background-color: #ddd;
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#Logo {
+  position: absolute;
+  left: 30px;
+  height: 100%;
+}
+
+#gnbList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gnbList li {
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+
+#gnbList li:hover {
+  background-color: #bbb;
+}
+
+/* header */
+
+.slide {
+  background-color: #bbb;
+  height: 300px;
+  width: 100vw;
+}
+
+.wrapper {
+  display: flex;
+  width: 300%;
+  height: 100%;
+
+  transition: 0.3s;
+  transform: translateX(-200vw);
+}
+
+.item {
+  padding-top: 130px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.slide ul {
+  display: flex;
+}
+
+.wrapper li {
+  width: 100%;
+}
+
+/* slide */
+
+.btns {
+  padding: 10px;
+}
+
+.btns ul {
+  display: flex;
+  justify-content: center;
+}
+
+.btns ul li {
+  margin: 0 10px;
+}
+
+.btns ul li button {
+  width: 20px;
+  height: 20px;
+}
+
+/* button */
+
+.banner {
+  background-color: #eee;
+  padding: 50px;
+}
+
+.bannerList {
+  display: flex;
+  justify-content: center;
+}
+
+.bannerList li {
+  margin: 0 10px;
+}
+
+.bannerList li a {
+  display: flex;
+  justify-content: center;
+
+  width: 150px;
+  height: 200px;
+
+  overflow: hidden;
+  max-width: 120%;
+
+  transition-duration: 0.25s;
+}
+
+.bannerList li a img {
+  width: 150px;
+  height: 200px;
+}
+
+.bannerList li a:hover {
+  transform: scale(1.1);
+}
+
+/* banner */
+
+.button {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 50%;
+
+  text-align: center;
+  line-height: 45px;
+
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  animation: slideUP 0.25s, fadeIN 1s;
+}
+
+@keyframes slideUP {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIN {
+  from {
+    opacity: 0;
+  }
+}
