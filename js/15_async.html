@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./15_async.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <!-- <script src="./15_async.js" defer></script> -->
+    <script src="./15-1_practice_api.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <form id="signUpForm">
+      <table>
+        <tr>
+          <th><label for="userId">ID</label></th>
+          <td><input type="text" id="userId" name="name" /></td>
+        </tr>
+        <tr>
+          <th><label for="userId">Email</label></th>
+          <td><input type="text" id="email" name="email" /></td>
+        </tr>
+        <tr>
+          <th><label for="">Password</label></th>
+          <td><input type="password" name="password" /></td>
+        </tr>
+      </table>
+      <button id="signUp">회원가입</button>
+    </form>
+
+    <form id="signInForm">
+      <h3>로그인</h3>
+      <table>
+        <tr>
+          <th>email</th>
+          <td><input type="email" name="email" /></td>
+        </tr>
+        <tr>
+          <th>password</th>
+          <td><input type="password" name="password" /></td>
+        </tr>
+      </table>
+      <button>로그인</button>
+    </form>
+  </body>
 </html>
